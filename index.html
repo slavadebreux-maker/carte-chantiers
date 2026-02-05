@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Carte des chantiers</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<button id="toggleSidebar">☰ Chantiers</button>
+
+</head>
+
+<body>
+<div id="container">
+
+    <div id="sidebar">
+        <h2>Chantier</h2>
+
+        <label>Nom</label>
+        <input type="text" id="nom">
+
+        <label>Adresse</label>
+        <input type="text" id="adresse">
+        <button type="button" id="searchAdresse">📍 Localiser l’adresse</button>
+
+        <label>Description</label>
+        <textarea id="description"></textarea>
+
+        <label>Chargé de travaux</label>
+        <input type="text" id="charge">
+
+        <label>Téléphone</label>
+        <input type="text" id="telephone">
+
+        <label>Statut</label>
+        <select id="statut">
+            <option value="a-visiter">À visiter</option>
+            <option value="en-cours">En cours</option>
+        </select>
+
+        <label>Latitude</label>
+        <input type="text" id="lat" readonly>
+
+        <label>Longitude</label>
+        <input type="text" id="lng" readonly>
+
+        <button type="button" id="addBtn">Ajouter</button>
+        <button type="button" id="updateBtn" disabled>Modifier</button>
+        <button type="button" id="deleteBtn" disabled>Supprimer</button>
+
+        <hr>
+        <h2>Liste des chantiers</h2>
+        <ul id="liste"></ul>
+    </div>
+
+    <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
